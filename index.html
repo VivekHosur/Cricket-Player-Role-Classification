@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Role Prediction</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Player Role Prediction</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="/index" method="post">
+
+                <div class="item">
+                    <label for="name">Enter Player Name </label>
+                    <input type="text" name="name" id="name" placeholder="Enter Player Name">
+                </div>
+
+                <div class="item">
+                    <label for="runs">Total Runs Scored by Player </label>
+                    <input type="text" name="runs" id="runs" placeholder="Total Runs" required>
+                </div>
+
+                <div class="item">
+                    <label for="bat_avg">Batting Average </label>
+                    <input type="text" name="batting_avg" id="bat_avg" placeholder="Batting Average" required>
+                </div>
+
+                <div class="item">
+                    <label for="wickets">Total Wickets taken by Player </label>
+                    <input type="text" name="wickets" id="wickets" placeholder="Toal Wickets" required>
+                </div>
+
+                <div class="item">
+                    <label for="bowl_avg">Bowling Average </label>
+                    <input type="text" name="bowling_avg" id="bowl_avg" placeholder="Bowling Average" required>
+                </div>
+
+                <div class="item">
+                    <label for="economy">Economy Rate </label>
+                    <input type="text" name="economy_rate" id="economy" placeholder="Economy Rate" required>
+                </div>
+
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+
+        <div class="result">
+            <h2>The predicted role for the {{name}} is: {{predicted_role}}</h2>
+        </div>
+    </main>
+
+</body>
+
+</html>
